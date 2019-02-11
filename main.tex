@@ -1,0 +1,111 @@
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{black}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Guy}{Moore}
+%\title{Software Engineer}
+%\address{7310 Kingsbury road}{93465 Templeton}{United States}
+\phone[mobile]{(805)~712~5006}
+\email{guy@g1y.io}
+\homepage{g1y.io}
+%\homepage{www.guywmoore.com}
+%\extrainfo{additional information}
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Experience}
+
+\subsection{}
+\cventry{4/18 -- Now}{Senior Engineer}{TransUnion}{Full Time}{}{
+\begin{itemize}
+\item Created CI build pipeline, with Jenkins and Docker.
+\item Transformed an aged development process that was riddled with manual tasks into fully CD development.
+\item Designed and implemented a standard suite of libraries and tooling for Jenkins CI that could be shared and reused among 110 different services.
+\item Docker in swarm mode, Jenkins CI, Java, Groovy, Python, bash, Maven, Jenkins pipelines, Jenkins pipeline libraries, InfluxDB, Grafana, Kubernetes, 
+\end{itemize}}
+
+\subsection{}
+\cventry{2/18 -- 8/18}{DevOps Engineer}{Adventure Aide}{Contract}{}{
+\begin{itemize}
+\item Developing configuration management suite, CI process, and continuous delivery process.
+\item Created an automated autoscaling and self healing web app backend with AWS, ELB, autoscaling EC2, and ansible to provision the new instances.
+\item Used Cloud Watch to create a daashboard for application monitoring to see when load spikes would come up and how the application infrastructure would automatically react as a result.
+\end{itemize}}
+
+\subsection{}
+\cventry{8/17 -- 4/18}{DevOps Engineer}{iFixit - Dozuki}{Full Time}{}{
+\begin{itemize}
+\item On call for server and application emergencies to triage and resolve pressing issues.
+\item Working with AWS services, including: EC2, S3, CloudFront, IAM, Lambda, ECS.
+\item Maintaining Ruby, Javascript, Bash, and Perl scripts for server configuration and deployments.
+\item Developing a CI process for our on-prem solution and production SaaS site.
+\item Fixed monolithic design restrictions to make our application more highly available.
+\end{itemize}}
+
+\subsection{}
+\cventry{5/15 -- 8/17}{Software Engineer}{iFixit - Dozuki}{Full Time}{}{
+\begin{itemize}
+\item Trained full stack engineers.
+\item Worked remotely on a different time zone with a US based team.
+\end{itemize}}
+
+
+\subsection{}
+\cventry{4/14 -- 5/15}{Software Engineer}{iFixit - Dozuki}{Part Time}{}{
+\begin{itemize}
+\item Full stack web development.
+\item Optimized queries and added caching to increase performance.
+\item Developed API endpoints for use in web apps and mobile apps:
+    \begin{itemize}
+        \item \href{https://www.ifixit.com/api/2.0/doc}{https://www.ifixit.com/api/2.0/doc} and \href{https://www.dozuki.com/api/2.0/doc}{https://www.dozuki.com/api/2.0/doc}
+    \end{itemize}
+\item Created unit and integration automated tests.
+\item Worked on an agile team that emphasized rigor and code quality.
+\end{itemize}}
+
+\
+
+\section{Projects}
+\subsection{GitHub Profile: https://github.com/g1y}
+
+\cvitemtext{ Crime Map}{Map of all police activity in San Luis Obispo. Categorization with KNN clustering. Python Flask app using the Google Maps Javascript API and Mongo. \href{https://github.com/g1y/crime-map}{https://github.com/g1y/crime-map}}
+
+\cvitemtext{ Pulldasher}{A multi-repository dashboard for code review and QA signoffs. Node.js app using Express with the-github API updated with WebSockets.\\
+\href{https://github.com/iFixit/pulldasher}{https://github.com/iFixit/pulldasher}}
+
+\section{Education}
+\cventry{8/14 -- 5/15}{Computer Science}{Cuesta College}{San Luis Obispo}{}{Completed all computer science courses}
+
+\end{document}
+
+
+%% end of file `template.tex'.
